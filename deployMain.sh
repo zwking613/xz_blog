@@ -11,7 +11,3 @@ git commit -m 'blog commit'
 git push origin main
 
 cd -
-
-
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:zichenlbl/vuepress.git master:gh-pages
