@@ -1,11 +1,11 @@
-import * as clientConfig0 from 'C:/Users/admin/Desktop/blog/vuepress-starter/node_modules/@vuepress/plugin-active-header-links/lib/client/config.js'
-import * as clientConfig1 from 'C:/Users/admin/Desktop/blog/vuepress-starter/node_modules/@vuepress/plugin-back-to-top/lib/client/config.js'
-import * as clientConfig2 from 'C:/Users/admin/Desktop/blog/vuepress-starter/node_modules/@vuepress/plugin-copy-code/lib/client/config.js'
-import * as clientConfig3 from 'C:/Users/admin/Desktop/blog/vuepress-starter/node_modules/@vuepress/plugin-medium-zoom/lib/client/config.js'
-import * as clientConfig4 from 'C:/Users/admin/Desktop/blog/vuepress-starter/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
-import * as clientConfig5 from 'C:/Users/admin/Desktop/blog/vuepress-starter/docs/.vuepress/.temp/prismjs/config.js'
-import * as clientConfig6 from 'C:/Users/admin/Desktop/blog/vuepress-starter/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
-import * as clientConfig7 from 'C:/Users/admin/Desktop/blog/vuepress-starter/node_modules/@vuepress/theme-default/lib/client/config.js'
+import * as clientConfig0 from 'C:/Users/admin/Desktop/blog/xz_blog/node_modules/@vuepress/plugin-active-header-links/lib/client/config.js'
+import * as clientConfig1 from 'C:/Users/admin/Desktop/blog/xz_blog/node_modules/@vuepress/plugin-back-to-top/lib/client/config.js'
+import * as clientConfig2 from 'C:/Users/admin/Desktop/blog/xz_blog/node_modules/@vuepress/plugin-copy-code/lib/client/config.js'
+import * as clientConfig3 from 'C:/Users/admin/Desktop/blog/xz_blog/node_modules/@vuepress/plugin-medium-zoom/lib/client/config.js'
+import * as clientConfig4 from 'C:/Users/admin/Desktop/blog/xz_blog/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
+import * as clientConfig5 from 'C:/Users/admin/Desktop/blog/xz_blog/docs/.vuepress/.temp/prismjs/config.js'
+import * as clientConfig6 from 'C:/Users/admin/Desktop/blog/xz_blog/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
+import * as clientConfig7 from 'C:/Users/admin/Desktop/blog/xz_blog/node_modules/@vuepress/theme-default/lib/client/config.js'
 
 export const clientConfigs = [
   clientConfig0,

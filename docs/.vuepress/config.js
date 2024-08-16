@@ -5,7 +5,7 @@ import { defineUserConfig } from 'vuepress'
 export default defineUserConfig({
     lang: 'zh-CN',
     title: 'XZ_BLOG',
-    base: '/zx_blog/',
+    base: '/xz_blog/',
     description: 'XZ 学习日常',
     bundler: viteBundler(),
     theme: defaultTheme({
