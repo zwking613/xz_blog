@@ -23,9 +23,3 @@ git commit -m 'deploy'
 git push -f git@github.com:zwking613/xz_blog.git master:gh-pages
 
 cd -
-https://<USERNAME>.github.io/vuepress/
-git@github.com:zwking613/xz_blog.git
-
-
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:zichenlbl/vuepress.git master:gh-pages
