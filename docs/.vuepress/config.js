@@ -1,141 +1,102 @@
-import { blogPlugin } from '@vuepress/plugin-blog'
+import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  lang: 'zn-CN',
-  base: '/xz_blog/',
-  title: 'xz_blog',
-  description: 'My first VuePress Site',
+    lang: 'zh-CN',
+    title: 'XZ_BLOG',
+    base: '/zx_blog/',
+    description: 'XZ 学习日常',
+    bundler: viteBundler(),
+    theme: defaultTheme({
+        logo: '/images/logo.png',
+        sidebar: [
 
-  theme: defaultTheme({
-    logo: '/images/logo.png',
+            {
+                title: 'HTML基础学习',   // 必要的
+                // path: '/前端学习笔记/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                collapsable: true, // 可选的, 默认值是 true,
+                sidebarDepth: 1,    // 可选的, 默认值是 1
+                children: [
+                    {
+                        title: 'HTML基础学习',
+                        path: '/guide/前端学习笔记/01html基础.md'
+                    },
+                    {
+                        title: 'bas',
+                        path: '/guide/前端学习笔记/00html基础.md'
+                    },
 
-    navbar: [
-      '/',
-      {
-        text: '文章',
-        link: '/article/',
-      },
-      {
-        text: '种类',
-        link: '/category/',
-      },
-      {
-        text: '标签',
-        link: '/tag/',
-      },
-      {
-        text: '时间轴',
-        link: '/timeline/',
-      },
-    ],
-  }),
-
-  plugins: [
-    blogPlugin({
-      // Only files under posts are articles
-      filter: ({ filePathRelative }) =>
-        filePathRelative ? filePathRelative.startsWith('posts/') : false,
-
-      // Getting article info
-      getInfo: ({ frontmatter, title, data }) => ({
-        title,
-        author: frontmatter.author || '',
-        date: frontmatter.date || null,
-        category: frontmatter.category || [],
-        tag: frontmatter.tag || [],
-        excerpt:
-          // Support manually set excerpt through frontmatter
-          typeof frontmatter.excerpt === 'string'
-            ? frontmatter.excerpt
-            : data?.excerpt || '',
-      }),
-
-      // Generate excerpt for all pages excerpt those users choose to disable
-      excerptFilter: ({ frontmatter }) =>
-        !frontmatter.home &&
-        frontmatter.excerpt !== false &&
-        typeof frontmatter.excerpt !== 'string',
-
-      category: [
-        {
-          key: 'category',
-          getter: (page) => page.frontmatter.category || [],
-          layout: 'Category',
-          itemLayout: 'Category',
-          frontmatter: () => ({
-            title: 'Categories',
-            sidebar: false,
-          }),
-          itemFrontmatter: (name) => ({
-            title: `Category ${name}`,
-            sidebar: false,
-          }),
-        },
-        {
-          key: 'tag',
-          getter: (page) => page.frontmatter.tag || [],
-          layout: 'Tag',
-          itemLayout: 'Tag',
-          frontmatter: () => ({
-            title: 'Tags',
-            sidebar: false,
-          }),
-          itemFrontmatter: (name) => ({
-            title: `Tag ${name}`,
-            sidebar: false,
-          }),
-        },
-      ],
-
-      type: [
-        {
-          key: 'article',
-          // Remove archive articles
-          filter: (page) => !page.frontmatter.archive,
-          layout: 'Article',
-          frontmatter: () => ({
-            title: 'Articles',
-            sidebar: false,
-          }),
-          // Sort pages with time and sticky
-          sorter: (pageA, pageB) => {
-            if (pageA.frontmatter.sticky && pageB.frontmatter.sticky)
-              return pageB.frontmatter.sticky - pageA.frontmatter.sticky
-
-            if (pageA.frontmatter.sticky && !pageB.frontmatter.sticky) return -1
-
-            if (!pageA.frontmatter.sticky && pageB.frontmatter.sticky) return 1
-
-            if (!pageB.frontmatter.date) return 1
-            if (!pageA.frontmatter.date) return -1
-
-            return (
-              new Date(pageB.frontmatter.date).getTime() -
-              new Date(pageA.frontmatter.date).getTime()
-            )
-          },
-        },
-        {
-          key: 'timeline',
-          // Only article with date should be added to timeline
-          filter: (page) => page.frontmatter.date instanceof Date,
-          // Sort pages with time
-          sorter: (pageA, pageB) =>
-            new Date(pageB.frontmatter.date).getTime() -
-            new Date(pageA.frontmatter.date).getTime(),
-          layout: 'Timeline',
-          frontmatter: () => ({
-            title: 'Timeline',
-            sidebar: false,
-          }),
-        },
-      ],
-      hotReload: true,
+                ]
+            },
+            {
+                title: 'Group 2',
+                children: [
+                    {
+                        title: 'java',
+                        path: '/java/01java.md'
+                    }
+                ],
+            }
+        ],
+        navbar: [
+            { text: '首页', link: '/' },
+            {
+                text: '技术笔记',
+                children: [
+                    {
+                        text: '前端',
+                        children: [
+                            { text: 'HTML & CSS', link: '/guide/notes/Web/' },
+                            { text: 'JavaScript', link: '/guide/notes/JavaScript/' },
+                            { text: 'Vue', link: '/guide/notes/Vue/' },
+                            { text: 'React', link: '/guide/notes/React/' },
+                            { text: 'Uni-app', link: '/guide/notes/Uni-app/' },
+                        ]
+                    },
+                    // {
+                    //     text: '后端', children: [
+                    //         { text: '前端学习笔记', link: '/guide/前端学习笔记/' },
+                    //         { text: 'Java学习笔记', link: '/guide/japanese/' }
+                    //     ]
+                    // },
+                ]
+            },
+            {
+                text: '常见问题',
+                link: '/guide/problem/'
+                // children: [
+                //     { text: '前端', link: '/guide/problem/' },
+                //     // { text: 'Japanese', link: '/language/japanese/' }
+                // ]
+            },
+            {
+                text: '面试常问',
+                link: '/guide/interview/',
+                // children: [
+                //     {
+                //         text: '前端', link: '/language/interview/' },
+                //     // { text: 'Japanese', link: '/language/japanese/' }
+                // ]
+            },
+            {
+                text: '开源项目',
+                children: [
+                    { text: 'HTML & CSS', link: '/guide/project/Web/' },
+                    { text: 'Vue', link: '/guide/project/Vue/' },
+                    { text: 'React', link: '/guide/project/React/' },
+                    { text: 'Uni-app', link: '/guide/project/Uni-app/' },
+                ]
+            },
+            {
+                text: '常用技术',
+                link: '/guide/skill/' 
+                // children: [
+                //     { text: 'Chinese', link: '/language/chinese/' }
+                //     // { text: 'Japanese', link: '/language/japanese/' }
+                // ]
+            },
+            { text: '关于我', link: '/guide/about/' ,sidebar:true}
+        ],
     }),
-  ],
-
-  bundler: viteBundler(),
 })

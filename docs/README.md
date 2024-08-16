@@ -1,33 +1,19 @@
 ---
 home: true
-title: Home
-heroImage: https://vuejs.press/images/hero.png
+title: 首页
 actions:
-  - text: Get Started
-    link: /getting-started.html
+  - text: 快速了解
+    link: /article/
     type: primary
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
-    type: secondary
-
 features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-  - title: Themes
-    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
-  - title: Plugins
-    details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
-  - title: Bundlers
-    details: Default bundler is Vite, while Webpack is also supported. Choose the one you like!
+  - title: 个人介绍
+    details: 主要涉及技术：前端主流框架。
+  - title: 开发笔记
+    details: 记录自己在日常中遇到的技术挑战和解决方案。分享在使用各种技术工具和框架时的实践经验和最佳实践。撰写详细的技术文档，包括配置步骤、代码示例和问题排查方法。
+  - title: 技术博客
+    details: 写作关于特定技术领域的深度文章，如微服务架构、容器化部署、Web开发等。分享个人对新技术的理解和见解，提供教程和指南，帮助其他开发者学习和解决实际问题。。
+footer: MIT Licensed | Copyright © 2018-present Evan You
 
-footer: MIT Licensed | Copyright © 2018-present VuePress Community
 ---
 
-This is the content of home page. Check [Home Page Docs][default-theme-home] for more details.
-
-[default-theme-home]: https://vuejs.press/reference/default-theme/frontmatter.html#home-page
