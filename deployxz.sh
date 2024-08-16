@@ -7,10 +7,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# 如果发布到 https://<USERNAME>.github.io
-git push -f git@github.com/zwking613/xz_blog.git master
-
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:zwking613/xz_blog.git master:gh-pages
+git remote add origin git@github.com/zwking613/xz_blog.git
+git push -f origin main
 
 cd -
