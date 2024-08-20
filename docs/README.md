@@ -3,7 +3,7 @@ home: true
 title: 首页
 actions:
   - text: 快速了解
-    link: /article/
+    link: /guide/about/
     type: primary
 
 features:

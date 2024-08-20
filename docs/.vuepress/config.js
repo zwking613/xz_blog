@@ -10,35 +10,58 @@ export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
         logo: '/images/logo.png',
-        sidebar: [
-
-            {
-                title: 'HTML基础学习',   // 必要的
-                // path: '/前端学习笔记/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                collapsable: true, // 可选的, 默认值是 true,
-                sidebarDepth: 1,    // 可选的, 默认值是 1
+        sidebar: {
+            '/guide/notes/Web/': [
+                {
+                    text: '侧边栏0001',
+                    collapsible:true,
+                    children: [
+                        {
+                            text: '侧边栏0001-1',
+                            collapsible: true,
+                            children: [
+                                "/guide/notes/Web/",
+                                "/guide/notes/Web/web001",
+                                "/guide/notes/Web/web002",
+                                "/guide/notes/Web/web003"
+                            ]
+                        }
+                    ]
+                },
+            ],
+            '/guide/notes/JavaScript/': [],
+            '/guide/notes/Vue/': [],
+            '/guide/notes/React/': [],
+            '/guide/notes/Uni-app/': [],
+            '/guide/problem/': [{
+                text: 'uni-app',
+                collapsible:true,
                 children: [
-                    {
-                        title: 'HTML基础学习',
-                        path: '/guide/前端学习笔记/01html基础.md'
-                    },
-                    {
-                        title: 'bas',
-                        path: '/guide/前端学习笔记/00html基础.md'
-                    },
-
+                    "/guide/problem/"
                 ]
-            },
-            {
-                title: 'Group 2',
-                children: [
-                    {
-                        title: 'java',
-                        path: '/java/01java.md'
-                    }
-                ],
-            }
-        ],
+            }],
+            '/guide/interview/': [
+                {
+                    text: '面试题',
+                    children: [
+                        '/guide/interview/Html&CSS',
+                        '/guide/interview/JavaScript',
+                        '/guide/interview/Vue&React',
+                    ]
+                },{
+                    text: '笔试题',
+                    children:[
+                        '/guide/interview/written_examination'
+                    ]
+                }
+            ],
+            '/guide/project/Web/': [],
+            '/guide/project/Vue/': [],
+            '/guide/project/React/': [],
+            '/guide/project/Uni-app/': [],
+            '/guide/skill/': [],
+            '/guide/about/': [],
+        },
         navbar: [
             { text: '首页', link: '/' },
             {
@@ -96,7 +119,7 @@ export default defineUserConfig({
                 //     // { text: 'Japanese', link: '/language/japanese/' }
                 // ]
             },
-            { text: '关于我', link: '/guide/about/' ,sidebar:true}
+            { text: '关于我', link: '/guide/about/'}
         ],
     }),
 })
