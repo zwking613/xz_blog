@@ -1,4 +1,4 @@
-<template><div><p>H5项目中使用 ECharts datazoom 无法再手机端进行缩放</p>
+<template><div><p>每一天都过着苦逼的代码生活！！！！！！</p>
 <hr>
 </div></template>
 

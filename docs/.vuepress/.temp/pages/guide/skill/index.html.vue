@@ -31,6 +31,8 @@
 <h3 id="代码编辑器" tabindex="-1"><a class="header-anchor" href="#代码编辑器"><span><a href="https://codepen.io/" target="_blank" rel="noopener noreferrer">代码编辑器</a></span></a></h3>
 <h3 id="color大全" tabindex="-1"><a class="header-anchor" href="#color大全"><span><a href="https://css.bqrdh.com/safety-color" target="_blank" rel="noopener noreferrer">Color大全</a></span></a></h3>
 <h3 id="canvas-案列框架" tabindex="-1"><a class="header-anchor" href="#canvas-案列框架"><span><a href="https://www.leaferjs.com" target="_blank" rel="noopener noreferrer">Canvas 案列框架</a></span></a></h3>
+<h3 id="chatgpt" tabindex="-1"><a class="header-anchor" href="#chatgpt"><span><a href="https://poe.com/ChatGPT" target="_blank" rel="noopener noreferrer">ChatGPT</a></span></a></h3>
+<h3 id="苏打云官网" tabindex="-1"><a class="header-anchor" href="#苏打云官网"><span><a href="https://b.sudacloud.top/#/login" target="_blank" rel="noopener noreferrer">苏打云官网</a></span></a></h3>
 <hr>
 </div></template>
 

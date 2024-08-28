@@ -30,7 +30,11 @@ export default defineUserConfig({
                 },
             ],
             '/guide/notes/JavaScript/': [],
-            '/guide/notes/Vue/': [],
+            '/guide/notes/Vue/': [{
+                children: [
+                    "/guide/notes/Vue/"
+                ]
+            },],
             '/guide/notes/React/': [],
             '/guide/notes/Uni-app/': [],
             '/guide/problem/': [{

@@ -73,4 +73,10 @@ archive: true
 
 ### [Canvas 案列框架](https://www.leaferjs.com)
 
+### [ChatGPT](https://poe.com/ChatGPT)
+
+### [苏打云官网](https://b.sudacloud.top/#/login)
+
+### [Vue hooks](https://pure-admin-utils.netlify.app/)
+
 ---
