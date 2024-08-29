@@ -1,16 +1,3 @@
 import comp from "C:/Users/admin/Desktop/blog/xz_blog/docs/.vuepress/.temp/pages/guide/notes/React/index.html.vue"
-const data = JSON.parse("{\"path\":\"/guide/notes/React/\",\"title\":\"JavaScript\",\"lang\":\"zh-CN\",\"frontmatter\":{\"date\":\"2024-08-16T00:00:00.000Z\",\"category\":[\"JavaScript\"],\"tag\":[\"JavaScript\"],\"archive\":true},\"headers\":[],\"git\":{\"updatedTime\":1723799375000,\"contributors\":[{\"name\":\"zZzwWw\",\"email\":\"348721637@qq.com\",\"commits\":1}]},\"filePathRelative\":\"guide/notes/React/README.md\"}")
+const data = JSON.parse("{\"path\":\"/guide/notes/React/\",\"title\":\"React全家桶+Vite\",\"lang\":\"zh-CN\",\"frontmatter\":{\"date\":\"2024-08-16T00:00:00.000Z\",\"category\":[\"React全家桶+Vite\"],\"tag\":[\"React全家桶+Vite\"],\"archive\":true},\"headers\":[{\"level\":3,\"title\":\"1.创建React项目\",\"slug\":\"_1-创建react项目\",\"link\":\"#_1-创建react项目\",\"children\":[]},{\"level\":3,\"title\":\"2.现在scss\",\"slug\":\"_2-现在scss\",\"link\":\"#_2-现在scss\",\"children\":[]},{\"level\":3,\"title\":\"3.安装路由\",\"slug\":\"_3-安装路由\",\"link\":\"#_3-安装路由\",\"children\":[]},{\"level\":3,\"title\":\"4.使用axios\",\"slug\":\"_4-使用axios\",\"link\":\"#_4-使用axios\",\"children\":[]},{\"level\":3,\"title\":\"5.使用redux\",\"slug\":\"_5-使用redux\",\"link\":\"#_5-使用redux\",\"children\":[]},{\"level\":3,\"title\":\"6.使用ant-design UI框架\",\"slug\":\"_6-使用ant-design-ui框架\",\"link\":\"#_6-使用ant-design-ui框架\",\"children\":[]}],\"git\":{\"updatedTime\":1723799375000,\"contributors\":[{\"name\":\"zZzwWw\",\"email\":\"348721637@qq.com\",\"commits\":1}]},\"filePathRelative\":\"guide/notes/React/README.md\"}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}

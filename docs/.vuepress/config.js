@@ -13,19 +13,11 @@ export default defineUserConfig({
         sidebar: {
             '/guide/notes/Web/': [
                 {
-                    text: '侧边栏0001',
-                    collapsible:true,
                     children: [
-                        {
-                            text: '侧边栏0001-1',
-                            collapsible: true,
-                            children: [
-                                "/guide/notes/Web/",
-                                "/guide/notes/Web/web001",
-                                "/guide/notes/Web/web002",
-                                "/guide/notes/Web/web003"
-                            ]
-                        }
+                        "/guide/notes/Web/",
+                        "/guide/notes/Web/filesUpload",
+                        "/guide/notes/Web/web002",
+                        "/guide/notes/Web/web003"
                     ]
                 },
             ],
@@ -35,11 +27,17 @@ export default defineUserConfig({
                     "/guide/notes/Vue/"
                 ]
             },],
-            '/guide/notes/React/': [],
+            '/guide/notes/React/': [
+                 {
+                    children: [
+                        "/guide/notes/React/",
+                    ]
+                },
+            ],
             '/guide/notes/Uni-app/': [],
             '/guide/problem/': [{
                 text: 'uni-app',
-                collapsible:true,
+                collapsible: true,
                 children: [
                     "/guide/problem/"
                 ]
@@ -52,9 +50,9 @@ export default defineUserConfig({
                         '/guide/interview/JavaScript',
                         '/guide/interview/Vue&React',
                     ]
-                },{
+                }, {
                     text: '笔试题',
-                    children:[
+                    children: [
                         '/guide/interview/written_examination'
                     ]
                 }
@@ -74,8 +72,10 @@ export default defineUserConfig({
                     {
                         text: '前端',
                         children: [
-                            { text: 'HTML & CSS', link: '/guide/notes/Web/' },
-                            { text: 'JavaScript', link: '/guide/notes/JavaScript/' },
+                            { text: '基础', link: '/guide/notes/Web/' },
+
+                            // { text: 'HTML & CSS', link: '/guide/notes/Web/' },
+                            // { text: 'JavaScript', link: '/guide/notes/JavaScript/' },
                             { text: 'Vue', link: '/guide/notes/Vue/' },
                             { text: 'React', link: '/guide/notes/React/' },
                             { text: 'Uni-app', link: '/guide/notes/Uni-app/' },
@@ -117,13 +117,13 @@ export default defineUserConfig({
             },
             {
                 text: '常用技术',
-                link: '/guide/skill/' 
+                link: '/guide/skill/'
                 // children: [
                 //     { text: 'Chinese', link: '/language/chinese/' }
                 //     // { text: 'Japanese', link: '/language/japanese/' }
                 // ]
             },
-            { text: '关于我', link: '/guide/about/'}
+            { text: '关于我', link: '/guide/about/' }
         ],
     }),
 })
