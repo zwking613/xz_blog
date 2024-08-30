@@ -497,4 +497,58 @@ export default function Index(){
 }
 ```
 
+### 7.项目引入tailwindcss[官网](https://www.tailwindcss.cn/docs/guides/vite)
+
+* 下载tailwindcss依赖
+
+```js
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+```
+
+* 在 tailwind.config.js 中添加配置
+
+```js
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
+
+* 在全局css样式文件中引入样式
+
+```css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+```
+
+* 使用
+
+```js
+
+export default function App() {
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  )
+}
+
+```
+
+
 ---

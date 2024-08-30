@@ -34,6 +34,7 @@
 <h3 id="chatgpt" tabindex="-1"><a class="header-anchor" href="#chatgpt"><span><a href="https://poe.com/ChatGPT" target="_blank" rel="noopener noreferrer">ChatGPT</a></span></a></h3>
 <h3 id="苏打云官网" tabindex="-1"><a class="header-anchor" href="#苏打云官网"><span><a href="https://b.sudacloud.top/#/login" target="_blank" rel="noopener noreferrer">苏打云官网</a></span></a></h3>
 <h3 id="vue-hooks" tabindex="-1"><a class="header-anchor" href="#vue-hooks"><span><a href="https://pure-admin-utils.netlify.app/" target="_blank" rel="noopener noreferrer">Vue hooks</a></span></a></h3>
+<h3 id="tailwind强烈推荐" tabindex="-1"><a class="header-anchor" href="#tailwind强烈推荐"><span><a href="https://www.tailwindcss.cn/docs/installation" target="_blank" rel="noopener noreferrer">tailwind强烈推荐</a></span></a></h3>
 <hr>
 </div></template>
 

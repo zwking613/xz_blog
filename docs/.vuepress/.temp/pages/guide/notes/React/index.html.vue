@@ -428,7 +428,55 @@
 <span class="line">    <span class="token punctuation">)</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_7-项目引入tailwindcss官网" tabindex="-1"><a class="header-anchor" href="#_7-项目引入tailwindcss官网"><span>7.项目引入tailwindcss<a href="https://www.tailwindcss.cn/docs/guides/vite" target="_blank" rel="noopener noreferrer">官网</a></span></a></h3>
+<ul>
+<li>下载tailwindcss依赖</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre><code><span class="line"></span>
+<span class="line">npm install <span class="token operator">-</span><span class="token constant">D</span> tailwindcss postcss autoprefixer</span>
+<span class="line">npx tailwindcss init <span class="token operator">-</span>p</span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>在 tailwind.config.js 中添加配置</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre><code><span class="line"></span>
+<span class="line"><span class="token doc-comment comment">/** <span class="token keyword">@type</span> <span class="token class-name"><span class="token punctuation">{</span><span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'tailwindcss'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Config<span class="token punctuation">}</span></span> */</span></span>
+<span class="line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span></span>
+<span class="line">  <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">[</span></span>
+<span class="line">    <span class="token string">"./index.html"</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token string">"./src/**/*.{js,ts,jsx,tsx}"</span><span class="token punctuation">,</span></span>
+<span class="line">  <span class="token punctuation">]</span><span class="token punctuation">,</span></span>
+<span class="line">  <span class="token literal-property property">theme</span><span class="token operator">:</span> <span class="token punctuation">{</span></span>
+<span class="line">    <span class="token literal-property property">extend</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="line">  <span class="token punctuation">}</span><span class="token punctuation">,</span></span>
+<span class="line">  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token punctuation">}</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>在全局css样式文件中引入样式</li>
+</ul>
+<div class="language-css line-numbers-mode" data-highlighter="prismjs" data-ext="css" data-title="css"><pre v-pre><code><span class="line"></span>
+<span class="line"><span class="token atrule"><span class="token rule">@tailwind</span> base<span class="token punctuation">;</span></span></span>
+<span class="line"><span class="token atrule"><span class="token rule">@tailwind</span> components<span class="token punctuation">;</span></span></span>
+<span class="line"><span class="token atrule"><span class="token rule">@tailwind</span> utilities<span class="token punctuation">;</span></span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>使用</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre><code><span class="line"></span>
+<span class="line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">  <span class="token keyword">return</span> <span class="token punctuation">(</span></span>
+<span class="line">    <span class="token operator">&lt;</span>h1 className<span class="token operator">=</span><span class="token string">"text-3xl font-bold underline"</span><span class="token operator">></span></span>
+<span class="line">      Hello world<span class="token operator">!</span></span>
+<span class="line">    <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></span>
+<span class="line">  <span class="token punctuation">)</span></span>
+<span class="line"><span class="token punctuation">}</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr>
 </div></template>
 
 

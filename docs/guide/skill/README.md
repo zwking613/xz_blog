@@ -79,4 +79,6 @@ archive: true
 
 ### [Vue hooks](https://pure-admin-utils.netlify.app/)
 
+### [tailwind强烈推荐](https://www.tailwindcss.cn/docs/installation)
+
 ---
